@@ -5,8 +5,8 @@
 int ANALOG_MAG_PIN = A0; //The analog pin for the analog output of the sensor
 int DIGITAL_MAG_PIN = 5; //The digital pin for the digital output of the sensor
 
-int mag_D;
-int mag_A;
+int mag_D; //Variable to store the digital reading
+int mag_A; //Variable to store the analog reading
 
 //Setup the Arduino
 void setup() 
