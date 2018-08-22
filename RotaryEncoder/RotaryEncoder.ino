@@ -19,7 +19,7 @@ void setup()
   pinMode(CLK_PIN, INPUT); //Make the pin you used an input on the Arduino
   pinMode(DT_PIN, INPUT); //Make the pin you used an input on the Arduino
   pinMode(SW_PIN, INPUT); //Make the pin you used an input on the Arduino
-  volume = 0; //Initialize the voluem to 0
+  volume = 0; //Initialize the volume to 0
 }
 
 //This code will run infinitely
