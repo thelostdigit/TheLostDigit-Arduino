@@ -18,7 +18,7 @@ void loop()
 {
 
   delay(1); //Delay 1mS to slow to 1000 readings per second
-  if(digitalRead(SHK_PIN) == HIGH) //Read the shock sensor
+  if(digitalRead(SHK_PIN) == LOW) //Read the shock sensor
   {
     Serial.println("Shock Detected"); //Print out that we have been shaken
     Serial.println("Resetting...");
