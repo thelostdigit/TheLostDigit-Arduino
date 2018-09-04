@@ -7,7 +7,7 @@ int G_PIN = 10; //Pin for the red portion of the LED
 int B_PIN = 11; //Pin for the red portion of the LED
 int JX_PIN = 0; //Pin for the Joystick X Direction (Analog)
 int JY_PIN = 1; //Pin for the Joystick Y Direction (Analog)
-int JSW_PIN = 2; //Pin for the Joystick Switch
+int JSW_PIN = 2; //Pin for the Joystick Switch (Analog)
 
 
 int joyX; //Variable to store the Joystick X reading
@@ -20,7 +20,6 @@ void setup()
   pinMode(R_PIN, OUTPUT); //Make the pin you used an output on the Arduino
   pinMode(G_PIN, OUTPUT); //Make the pin you used an output on the Arduino
   pinMode(B_PIN, OUTPUT); //Make the pin you used an output on the Arduino
-  pinMode(JSW_PIN, INPUT); //Make the pin you used an input on the Arduino
 }
 
 //This function will update the RGB LED when called
@@ -38,9 +37,9 @@ void loop()
   delay(100); //Delay 100mS to slow to 10 readings per second
   joyX = analogRead(JX_PIN); //Read the X position
   joyY = analogRead(JY_PIN); //Read the Y position
-  joySW = digitalRead(JSW_PIN); //Read the Switch, if it is pressed output will be 1, if not, 0
+  joySW = analogRead(JSW_PIN); //Read the Switch, 255 or 0
 
-  setRGB(joyX, joyY, 255*joySW);  
+  setRGB(joyX, joyY, joySW);  
   
 }
 
