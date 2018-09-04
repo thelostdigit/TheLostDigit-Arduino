@@ -39,7 +39,7 @@ void loop()
   joyY = analogRead(JY_PIN); //Read the Y position
   joySW = analogRead(JSW_PIN); //Read the Switch, 255 or 0
 
-  setRGB(joyX, joyY, joySW);  
+  setRGB(joyX, joyY, joySW); //Set the RGB output to the inputs from the joystick
   
 }
 
